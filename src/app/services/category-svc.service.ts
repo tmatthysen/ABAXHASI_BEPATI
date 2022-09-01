@@ -12,7 +12,7 @@ export class CategorySvcService {
   categories: Observable<category[]>;
 
   constructor(private http:HttpClient) { 
-    this.categories =  this.http.get<category[]>('http://localhost:3000/categories/category')
+    this.categories =  this.http.get<category[]>('http://express-js.dggkegh0b7e7c2gn.westeurope.azurecontainer.io:3000/categories/category')
   }
 
   getCategory(){
