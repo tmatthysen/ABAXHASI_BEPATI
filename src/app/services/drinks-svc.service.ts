@@ -16,26 +16,26 @@ export class DrinksSvcService {
   constructor(private http:HttpClient){}
 
   getDrinks(filter: String): Observable<drink[]> {
-    return this.http.get<drink[]>('http://express-js.dggkegh0b7e7c2gn.westeurope.azurecontainer.io:3000/drinks/drinks/' + filter);
+    return this.http.get<drink[]>('https://app.abaxhasibepati.ml/drinks/drinks/' + filter);
   }
 
   getQTY(filter: String): Observable<qty[]> {
-    return this.http.get<qty[]>('http://express-js.dggkegh0b7e7c2gn.westeurope.azurecontainer.io:3000/qty/qty/' + filter);
+    return this.http.get<qty[]>('https://app.abaxhasibepati.ml/qty/qty/' + filter);
   }
 
   getAllDrinks(): Observable<drink[]> {
-    return this.http.get<drink[]>('http://express-js.dggkegh0b7e7c2gn.westeurope.azurecontainer.io:3000/drinks/drinks/All');
+    return this.http.get<drink[]>('https://app.abaxhasibepati.ml/drinks/drinks/All');
   }
 
   getOrders(suite: any): Observable<order[]> {
-    return this.http.get<order[]>('http://express-js.dggkegh0b7e7c2gn.westeurope.azurecontainer.io:3000/order/order/' + suite);
+    return this.http.get<order[]>('https://app.abaxhasibepati.ml/order/order/' + suite);
   }
 
   addOrder(suite: any,item: string,itemqty: string,itemprice: string){
     const body = JSON.stringify({"suiteNumber":suite,"item":item, "itemqty": itemqty, "itemprice": itemprice});
     const headers = { 'content-type': 'application/json'};
     console.log(body);
-    this.http.post('http://express-js.dggkegh0b7e7c2gn.westeurope.azurecontainer.io:3000/order/new', body, {'headers':headers}).subscribe((res) => {
+    this.http.post('https://app.abaxhasibepati.ml/order/new', body, {'headers':headers}).subscribe((res) => {
       console.log(res);
     });
   }
