@@ -35,7 +35,7 @@ export class DrinksSvcService {
     const body = JSON.stringify({"suiteNumber":suite,"item":item, "itemqty": itemqty, "itemprice": itemprice});
     const headers = { 'content-type': 'application/json'};
     console.log(body);
-    this.http.post('https://app.abaxhasibepati.ml/order/new', body, {'headers':headers}).subscribe((res) => {
+    this.http.post('http://localhost:3080/order/new', body, {'headers':headers}).subscribe((res) => {
       console.log(res);
     });
   }

@@ -12,7 +12,7 @@ export class CategorySvcService {
   categories: Observable<category[]>;
 
   constructor(private http:HttpClient) { 
-    this.categories =  this.http.get<category[]>('https://app.abaxhasibepati.ml/categories/category')
+    this.categories =  this.http.get<category[]>('http://localhost:3080/categories/category')
   }
 
   getCategory(){
