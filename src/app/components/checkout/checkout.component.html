@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <mat-toolbar id="toolbar">
+            <mat-toolbar-row class="justify-content-center">
+                <span id="appHeading">{{appHeading}}</span>
+            </mat-toolbar-row>
+            <mat-toolbar-row>
+                <span id="appBegin">{{appBegin}}</span>
+                <mat-divider id="dividerBegin"></mat-divider>
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </div>
+    <mat-selection-list  [multiple]="false" id="list">
+        <mat-list-option *ngFor="let option of options" [value]="option" class="mt-4">
+            <button routerLink="/thankyou" type="button" class="btn btn-success mt-2">{{option}}</button>
+        </mat-list-option>
+    </mat-selection-list>
+</div>

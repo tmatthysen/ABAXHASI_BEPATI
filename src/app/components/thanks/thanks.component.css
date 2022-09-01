@@ -1,0 +1,28 @@
+@media only screen and (max-width: 800px) {
+    .container {
+        width: 100% !important;
+        padding: 0 !important;
+        margin : 0 !important;
+    }
+}
+
+.container {
+    width: 60% ;
+    padding: 0;
+
+
+}
+
+#text {
+    color: #C6F4D6;
+    position: relative;
+    top: 10rem;
+    font-size: 2.4rem;
+    font-family: customnunito;
+    font-weight: 600;
+    line-height: 2.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
